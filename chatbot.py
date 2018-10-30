@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import pyglet
 import time
-import winsound #tylko na windowsie, na lina czy maca trzeba inna biblioteke
+import winsound 
 import pdfkit #dodatkowo instalacja wkhtmltopdf
 import smtplib #obsluga emaili
 from email.mime.text import MIMEText
@@ -13,7 +13,7 @@ from wit import Wit
 
 
 r = sr.Recognizer()
-client = Wit('HJZOKFJGOINR33CIRY6RD6AGLZ3FV2QD')  # token do chatbota powinien być ukryty
+client = Wit('')  #token do chatbota
 
 
 
@@ -46,7 +46,7 @@ class Chatbot():
         self.farewell = 'Dobrze! Jezeli kiedykolwiek zmienisz zdanie będę tutaj do Twojej dyspozycji.'
 
 
-def voice_recognition(time_limit= 2, lang='pl-PL'):  # domyslnie voice nasluchiwany przez 3sek i w jezyku polskim
+def voice_recognition(time_limit= 2, lang='pl-PL'):  # domyslnie voice nasluchiwany przez 2sek i w jezyku polskim
 
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source)
