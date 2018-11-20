@@ -100,9 +100,9 @@ def witai_query_name(query_content):
         return False
 
 
-def recruitment_chatbot(Chatbot): # tu trzeba przekazac do funkcji obiekt chatbota, pozamieniac na duze litery
+def recruitment_chatbot(Chatbot): 
 
-    while Chatbot.continuity: # Chatbot.continuity == True
+    while Chatbot.continuity: 
 
         if Chatbot.progres == 0:
 
@@ -245,7 +245,7 @@ def sending_email(Chatbot):
     server.quit()
 
 # MAIN
-nowy_chatbot = Chatbot()
+Chatbot = Chatbot()
 
 recruitment_chatbot(Chatbot)
 creating_pdf_from_string(Chatbot)
